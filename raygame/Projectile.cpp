@@ -1,10 +1,11 @@
 #include "Projectile.h"
+#include "Transform2D.h"
 
-Projectile::Projectile(char* name, char* spritePath, char* faction, float despawnTime) : Actor::Actor
+Projectile::Projectile(char* name, char* spritePath, Actor* shooter, float despawnTime) : Actor::Actor
 {
-	Actor();
+	Actor(*(shooter)).getTransform().getWorldPosition()->x, (*(shooter)).getTransform().getWorldPosition()->y, "Actor");
 	m_name = name;
-	m_faction = faction;
+	m_shooter = shooter;
 	
 	m_collider = new CircleCollider(25, this);
 	m_trajectory = MathLibrary::Vector2(0, 0);
