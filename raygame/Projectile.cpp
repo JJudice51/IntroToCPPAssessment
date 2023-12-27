@@ -3,7 +3,7 @@
 
 Projectile::Projectile(char* name, char* spritePath, Actor* shooter, float despawnTime) : Actor::Actor
 {
-	Actor(*(shooter)).getTransform().getWorldPosition()->x, (*(shooter)).getTransform().getWorldPosition()->y, "Actor");
+	Actor(shooter->getTransform()->getWorldPosition()->x, shooter->getTransform()->getWorldPosition()->y, "Actor");
 	m_name = name;
 	m_shooter = shooter;
 	
