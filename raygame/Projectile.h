@@ -14,8 +14,6 @@ private:
     float m_despawnTime;
     //stores a copy of the current time that has passed since this projectile has been active
     float m_currentTime;
-    //stores a reference to this projectile's collider
-    CircleCollider* m_collider;
     //stores a reference to the array of characters that represents this projectiles faction
     Actor* m_shooter;
 
