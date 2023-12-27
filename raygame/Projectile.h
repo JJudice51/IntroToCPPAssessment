@@ -29,9 +29,8 @@ public:
     /// <param name="m_despawnTime">how long until the projectile despawns.</param>
     Projectile(char* name, char* spritePath, Actor* shooter, float m_despawnTime);
     /// <summary>
-    /// gives the projectile a new direction and speed to move in.
+    /// updates the trajectory of the projectile to be the direction that the shooter of this Projectile is facing.
     /// </summary>
-    /// <param name="trajectory">the new direction and speed of the projectile.</param>
-    void updateTrajectory(MathLibrary::Vector2 trajectory);
+    void updateTrajectory();
 };
 

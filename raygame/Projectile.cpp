@@ -1,9 +1,8 @@
 #include "Projectile.h"
 #include "Transform2D.h"
 
-Projectile::Projectile(char* name, char* spritePath, Actor* shooter, float despawnTime) : Actor::Actor
+Projectile::Projectile(char* name, char* spritePath, Actor* shooter, float despawnTime) : Actor::Actor(shooter->getTransform()->getWorldPosition().x, shooter->getTransform()->getWorldPosition().y, "Actor")
 {
-	Actor(shooter->getTransform()->getWorldPosition()->x, shooter->getTransform()->getWorldPosition()->y, "Actor");
 	m_name = name;
 	m_shooter = shooter;
 	
@@ -13,7 +12,7 @@ Projectile::Projectile(char* name, char* spritePath, Actor* shooter, float despa
 	m_currentTime = 0;
 }
 
-void Projectile::updateTrajectory(MathLibrary::Vector2 trajectory)
+void Projectile::updateTrajectory()
 {
-	m_trajectory = trajectory;
+	m_trajectory = m_shooter->getTransform()->getForward();
 }
