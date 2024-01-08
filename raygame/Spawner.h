@@ -1,4 +1,7 @@
 #pragma once
+class Transform2D;
+
+
 class Spawner
 {
 private:
@@ -7,6 +10,10 @@ private:
 
 
 public:
+
+	Spawner();
+
+
 
 
 };
