@@ -21,5 +21,8 @@ public:
 	/// <param name="faction">the faction of the Character</param>
 	Character(float x, float y, const char* name, const char* faction);
 
+	/// <summary>
+	/// runs all the code needed at the start of this Character.
+	/// </summary>
 	void start();
 };

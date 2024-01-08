@@ -9,5 +9,5 @@ Character::Character(float x, float y, const char* name, const char* faction) : 
 void Character::start()
 {
 	addComponent(new HealthComponent(this, "Health", 100));
-	Actor().start();
+	Actor::start();
 }
