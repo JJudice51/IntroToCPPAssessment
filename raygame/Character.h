@@ -24,5 +24,5 @@ public:
 	/// <summary>
 	/// runs all the code needed at the start of this Character.
 	/// </summary>
-	void start();
+	void start() override;
 };
