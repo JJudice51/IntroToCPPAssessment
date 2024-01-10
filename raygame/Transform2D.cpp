@@ -44,7 +44,7 @@ MathLibrary::Vector2 Transform2D::getWorldPosition()
     return MathLibrary::Vector2(m_globalMatrix->m02, m_globalMatrix->m12);
 }
 
-void Transform2D::setWorldPostion(MathLibrary::Vector2 value)
+void Transform2D::setWorldPosition(MathLibrary::Vector2 value)
 {
     //If the transform has a parent...
     if (m_parent)
@@ -174,6 +174,11 @@ void Transform2D::scale(MathLibrary::Vector2 scale)
     //Combine the scale matrix with a new matrix scaled by the given amount
     *m_scale = *m_scale * MathLibrary::Matrix3::createScale(scale);
     m_shouldUpdateTransforms = true;
+}
+
+void Transform2D::translate(MathLibrary::Vector2 translation)
+{
+    m_translation = &(getTranslation() * MathLibrary::Matrix3().createTranslation(translation));
 }
 
 MathLibrary::Vector2 Transform2D::getScale()
