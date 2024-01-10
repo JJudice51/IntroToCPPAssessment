@@ -27,6 +27,7 @@ public:
 	/// <summary>
 	/// moves the Actor that this is attached to in a certain direction.
 	/// </summary>
+	/// <param name="direction">the direction to move the Actor.</param>
 	void move(MathLibrary::Vector2 direction);
 
 	/// <summary>
@@ -42,7 +43,7 @@ public:
 	void rotate(float radians);
 
 	/// <summary>
-	/// updates the position of the Actor that this is attached to, then resets velocity to move.
+	/// updates this Component.
 	/// </summary>
 	/// <param name="deltaTime">the amount of time that has passed between the current and last frame.</param>
 	void update(float deltaTime) override;
