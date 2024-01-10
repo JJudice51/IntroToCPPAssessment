@@ -176,12 +176,6 @@ void Transform2D::scale(MathLibrary::Vector2 scale)
     m_shouldUpdateTransforms = true;
 }
 
-void Transform2D::translate(MathLibrary::Vector2 translation)
-{
-    //adjusts the translation matrix by the given amount in Vector form.
-    m_translation = &(getTranslation() * MathLibrary::Matrix3().createTranslation(translation));
-}
-
 MathLibrary::Vector2 Transform2D::getScale()
 {
     //Get the magnitude of the x and y axis
