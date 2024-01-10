@@ -21,6 +21,11 @@ public:
 	/// <param name="speed">the speed that the Enemy will move.</param>
 	Enemy(float x, float y, float speed);
 
+	Actor* getNearestVisibleTarget();
+
+	Waypoint* findNewWaypoint();
+
+
 	/// <summary>
 	/// computes pathfinding for the Enemy.
 	/// </summary>
