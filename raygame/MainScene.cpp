@@ -7,8 +7,7 @@ MainScene::MainScene() : Scene::Scene()
 
 MainScene::~MainScene()
 {
-	//deconstruct base class
-	Scene::~Scene();
+
 }
 
 void MainScene::start()
@@ -31,6 +30,9 @@ void MainScene::update(float deltaTime)
 
 void MainScene::end()
 {
+	//deconstructs this Scene.
+	MainScene::~MainScene();
+
 	//calls the base function.
 	Scene::end();
 }
