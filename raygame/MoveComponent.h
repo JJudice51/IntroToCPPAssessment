@@ -7,9 +7,9 @@ class MoveComponent : public Component
 {
 private:
 	/// <summary>
-	/// stores the velocity to be added to the Actor this is attached to.
+	/// stores the amount of speed to scale the amount of velocity that will be given to the Actor that this is attached to.
 	/// </summary>
-	MathLibrary::Vector2 m_velocity;
+	float m_speed;
 
 	/// <summary>
 	/// stores a reference to the owner of this component.
@@ -21,7 +21,19 @@ public:
 	/// constructs a component that is responsible for giving an Actor movement.
 	/// </summary>
 	/// <param name="owner">the owner of this component.</param>
-	MoveComponent(Actor* owner);
+	/// <param name="speed">the magnitude of distance that the Actor will cover every frame.</param>
+	MoveComponent(Actor* owner, float speed);
+
+	/// <summary>
+	/// moves the Actor that this is attached to in a certain direction.
+	/// </summary>
+	void move(MathLibrary::Vector2 direction);
+
+	/// <summary>
+	/// changes the direction that the Actor that this is attached to is facing.
+	/// </summary>
+	/// <param name="direction">the direction to move the Actor.</param>
+	void setFacing(MathLibrary::Vector2 direction);
 
 	/// <summary>
 	/// rotates the Actor that this component is attached to.
