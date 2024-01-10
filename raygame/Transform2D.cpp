@@ -178,6 +178,7 @@ void Transform2D::scale(MathLibrary::Vector2 scale)
 
 void Transform2D::translate(MathLibrary::Vector2 translation)
 {
+    //adjusts the translation matrix by the given amount in Vector form.
     m_translation = &(getTranslation() * MathLibrary::Matrix3().createTranslation(translation));
 }
 

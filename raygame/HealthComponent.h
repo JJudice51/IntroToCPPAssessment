@@ -24,5 +24,9 @@ public:
 	/// <returns>the value of health that this Actor has.</returns>
 	float getHealth() { return m_health; }
 
+	/// <summary>
+	/// reduces the Actor (that this is attached to)'s health by a specific amount.
+	/// </summary>
+	/// <param name="damage">the amount to reduce this Actor's health.</param>
 	void takeDamage(float damage);
 };
