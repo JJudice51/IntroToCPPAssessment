@@ -89,12 +89,6 @@ public:
     /// <returns>this Transform2D's translation Matrix3.</returns>
     MathLibrary::Matrix3 getTranslation() { return *m_translation; }
 
-    /// <summary>
-    /// changes the position of this Transform2D on a 2D plane.
-    /// </summary>
-    /// <param name="translation">The amount to translate the Transform2D.</param>
-    void translate(MathLibrary::Vector2 translation);
-
     /// <summary>The width and height of the transform.</summary>
     MathLibrary::Vector2 getScale();
 
