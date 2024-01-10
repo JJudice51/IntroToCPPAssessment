@@ -1,13 +1,8 @@
 #include "HealthComponent.h"
 
-HealthComponent::HealthComponent(Actor* owner, const char* name, float maxHealth)
+HealthComponent::HealthComponent(Actor* owner, float maxHealth) : Component::Component(owner, "Health")
 {
 	m_health = maxHealth;
-}
-
-int HealthComponent::getHealth()
-{
-	return m_health;
 }
 
 void HealthComponent::takeDamage(float damage)

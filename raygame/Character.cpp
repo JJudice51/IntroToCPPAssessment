@@ -11,8 +11,8 @@ Character::Character(float x, float y, float speed, const char* name, const char
 
 void Character::start()
 {
-	addComponent(new HealthComponent(this, "Health", 100));
-	addComponent(new MoveComponent(this, 50));
+	addComponent(new HealthComponent(this, 100));
+	addComponent(new MoveComponent(this, m_speed));
 	Actor::start();
 }
 
