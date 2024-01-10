@@ -1,17 +1,22 @@
 #pragma once
+#include "Actor.h"
+
+
 class Transform2D;
 
 
-class Spawner
+class Spawner : public Actor
 {
 private:
+	
+	Actor m_owner;
 
 
 
 
 public:
 
-	Spawner();
+	Spawner(Actor owner);
 
 
 
