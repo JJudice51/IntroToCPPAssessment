@@ -24,11 +24,18 @@ public:
     /// <param name="name">the name of the projectile</param>
     /// <param name="spritePath">the file path to the image that represents this projectile</param>
     /// <param name="shooter">the Actor that this projectile came from.</param>
-    /// <param name="m_despawnTime">how long until the projectile despawns.</param>
-    Projectile(char* name, char* spritePath, Actor* shooter, float m_despawnTime);
+    /// <param name="speed">the speed that the projectile will move.</param>
+    /// <param name="despawnTime">how long until the projectile despawns.</param>
+    Projectile(char* name, char* spritePath, Actor* shooter, float speed, float despawnTime);
     /// <summary>
     /// updates the trajectory of the projectile to be the direction that the shooter of this Projectile is facing.
+    /// should be called upon spawn.
     /// </summary>
     void updateTrajectory();
+    /// <summary>
+    /// updates the projectile's position in the direction of it's trajectory scaled to it's speed.
+    /// </summary>
+    /// <param name="deltaTime">the amount of time that has passed between this frame and the last.</param>
+    void update(float deltaTime);
 };
 
