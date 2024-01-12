@@ -32,7 +32,7 @@ public:
     /// Sets the world position of the transform.
     /// </summary>
     /// <param name="value">The new world coordinates to place the transform.</param>
-    void setWorldPostion(MathLibrary::Vector2 value);
+    void setWorldPosition(MathLibrary::Vector2 value);
 
 
     /// <returns>Returns the position of the actor relative to its parent transform.</returns>
@@ -85,6 +85,15 @@ public:
     /// </summary>
     /// <param name="scale">The amount to scale the object on the x and y axis.</param>
     void scale(MathLibrary::Vector2 scale);
+    
+    /// <returns>this Transform2D's translation Matrix3.</returns>
+    MathLibrary::Matrix3 getTranslation() { return *m_translation; }
+
+    /// <summary>
+    /// changes the position of this Transform2D on a 2D plane.
+    /// </summary>
+    /// <param name="translation">The amount to translate the Transform2D.</param>
+    void translate(MathLibrary::Vector2 translation);
 
     /// <summary>The width and height of the transform.</summary>
     MathLibrary::Vector2 getScale();
