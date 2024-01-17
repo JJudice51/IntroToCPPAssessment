@@ -53,6 +53,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Spawner.cpp" />
+    <ClCompile Include="WeaponComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AABBCollider.h">
@@ -104,6 +105,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Spawner.h" />
+    <ClInclude Include="WeaponComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\Images\player.png">

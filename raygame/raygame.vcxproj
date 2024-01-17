@@ -164,6 +164,7 @@
     <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="Transform2D.cpp" />
     <ClCompile Include="Waypoint.cpp" />
+    <ClCompile Include="WeaponComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AABBCollider.h" />
@@ -183,6 +184,7 @@
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="Transform2D.h" />
     <ClInclude Include="Waypoint.h" />
+    <ClInclude Include="WeaponComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\Images\bullet.png">
