@@ -1,8 +1,6 @@
 #pragma once
 #include "Component.h"
-#include "Collider.h"
 #include "CircleCollider.h"
-#include "AABBCollider.h"
 
 
 
@@ -13,7 +11,6 @@ class ColliderComponent :
 private:
     Actor* m_owner;
     float m_radius;
-    
 
 
 public:

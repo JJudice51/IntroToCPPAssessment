@@ -1,5 +1,9 @@
-#include "ColliderComponent.					
+#include "ColliderComponent.h"
+
 ColliderComponent::ColliderComponent(float radius, Actor* owner)
 {
 	m_owner = owner;
-	m_rad
+	m_radius = radius;
+}
+
+
