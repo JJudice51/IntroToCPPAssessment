@@ -8,6 +8,7 @@ class WeaponComponent : public Component
 {
 
 private:
+	//the Actor who owns a given WeaponComponent
 	Actor* m_owner;
 
 

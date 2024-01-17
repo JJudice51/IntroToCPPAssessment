@@ -159,6 +159,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MoveComponent.cpp" />
     <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="ProjectileWeaponComponent.cpp" />
     <ClCompile Include="SampleScene.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Spawner.cpp" />
@@ -180,6 +181,7 @@
     <ClInclude Include="HealthComponent.h" />
     <ClInclude Include="MoveComponent.h" />
     <ClInclude Include="Projectile.h" />
+    <ClInclude Include="ProjectileWeaponComponent.h" />
     <ClInclude Include="SampleScene.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Spawner.h" />

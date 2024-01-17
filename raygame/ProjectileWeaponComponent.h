@@ -3,15 +3,17 @@
 #include "Projectile.h"
 #include "Spawner.h"
 #include "Character.h"
-class ProjectileWeaponComponent :public WeaponComponent
+class ProjectileWeapon :public WeaponComponent
 {
 private:
-
+	Character* m_owner;
+	Spawner* m_projectileSpawner;
+	Projectile* m_bullet;
 
 
 public:
-
-
+	
+	ProjectileWeaponComponent(Character* owner, Spawner* projectileSpawner);
 
 
 };
