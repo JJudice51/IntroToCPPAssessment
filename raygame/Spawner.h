@@ -47,5 +47,11 @@ public:
 	/// </summary>
 	void updateSpawner();
 
+	/// <summary>
+	/// updates the Facing of the spawner 
+	/// </summary>
+	///<param name="facing">the new facing value to update spawner with</param>
+	void updateFacing(MathLibrary::Vector2 facing);
+
 };
 

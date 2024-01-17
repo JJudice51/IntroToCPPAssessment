@@ -37,6 +37,13 @@ void Spawner::updateSpawner()
 	m_facing = m_owner->getTransform()->getForward();
 }
 
+void Spawner::updateFacing(MathLibrary::Vector2 facing)
+{
+	//this changes the original facing of the spawner to the new value given in the parameters.
+	m_facing = facing;
+
+}
+
 
 
 
