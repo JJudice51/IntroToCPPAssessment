@@ -20,7 +20,7 @@ Spawner::Spawner(MathLibrary::Vector2 facing, float x, float y)
 	m_position = { x, y };
 }
 
-void Spawner::Spawn(Actor* spawnee)
+void Spawner::spawn(Actor* spawnee)
 {
 	//makes the position of the spawnee the same as the spawner
 	spawnee->getTransform()->setWorldPosition(m_position);

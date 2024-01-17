@@ -161,6 +161,7 @@
     <ClCompile Include="SampleScene.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Spawner.cpp" />
+    <ClCompile Include="EnemySpawnGroup.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="Transform2D.cpp" />
     <ClCompile Include="Waypoint.cpp" />
@@ -180,7 +181,7 @@
     <ClInclude Include="SampleScene.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Spawner.h" />
-    <ClInclude Include="SpawnGroup.h" />
+    <ClInclude Include="EnemySpawnGroup.h" />
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="Transform2D.h" />
     <ClInclude Include="Waypoint.h" />
