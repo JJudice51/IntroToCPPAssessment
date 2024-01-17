@@ -1,20 +1,42 @@
 #include "Spawner.h"
-#include "Actor.h"
+#include "Transform2D.h"
 
-Spawner::Spawner()
+Spawner::Spawner(Actor* owner, float x, float y)
 {
+	//stores reference to the owner of this spawner
+	m_owner = owner;
 
+	//stores the position of this spawner
+	m_position = { x, y };
 }
 
-Spawner::Spawner(float spawnX, float spawnY, const char* name)
+Spawner::Spawner(MathLibrary::Vector2 facing, float x, float y)
 {
-
+	//stores reference to the owner of this spawner
+	m_owner = nullptr;
+	//stores the current direction the spawner is facing
+	m_facing = facing;
+	//stores the position of this spawner
+	m_position = { x, y };
 }
 
-void::SpawnActor()
+void Spawner::Spawn(Actor* spawnee)
 {
-	Actor newGuy = new Actor()
-		//i want to make an actor have that actor enter the scene at the location of the spawner how the fuck do i do that... no idea where to start kinda freaking out. i have no idea
-		//how this works in c++
+	//makes the position of the spawnee the same as the spawner
+	spawnee->getTransform()->setWorldPosition(m_position);
+	//makes the facing of the spawnee the same as the spawner
+	spawnee->getTransform()->setForward(m_facing);
 }
+
+void Spawner::updateSpawner()
+{
+	//if there is no owner then this function will return.
+	if (m_owner == nullptr)
+		return;
+	//this makes the facing of the spawner the same as it's owners.
+	m_facing = m_owner->getTransform()->getForward();
+}
+
+
+
 
