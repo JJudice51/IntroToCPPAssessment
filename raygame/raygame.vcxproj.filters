@@ -59,7 +59,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="WeaponComponent.cpp" />
-    <ClCompile Include="ProjectileWeaponComponent.cpp" />
+    <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AABBCollider.h">
@@ -117,7 +117,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="WeaponComponent.h" />
-    <ClInclude Include="ProjectileWeaponComponent.h" />
+    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\Images\player.png">

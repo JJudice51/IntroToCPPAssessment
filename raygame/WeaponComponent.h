@@ -8,7 +8,7 @@ class WeaponComponent : public Component
 {
 
 private:
-	//the Actor who owns a given WeaponComponent
+	//the Actor who owns a given WeaponComponent.
 	Actor* m_owner;
 
 
@@ -26,7 +26,7 @@ public:
 
 
 
-
+	//make it so that whoever has the weapon component can wield a weapon.
 
 
 
