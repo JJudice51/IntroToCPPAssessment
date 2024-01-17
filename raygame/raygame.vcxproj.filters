@@ -52,6 +52,7 @@
     <ClCompile Include="Waypoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Spawner.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AABBCollider.h">
@@ -102,6 +103,7 @@
     <ClInclude Include="Waypoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Spawner.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\Images\player.png">
