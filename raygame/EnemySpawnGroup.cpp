@@ -1,6 +1,7 @@
 #include "EnemySpawnGroup.h"
 #include "Spawner.h"
 #include "Scene.h"
+#include "SpawnManager.h"
 
 //initializes m_enemyCount and gives it a starting value of 3. This only happens once every game.
 static int m_enemyCount = 3;
