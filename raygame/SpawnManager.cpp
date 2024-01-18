@@ -86,3 +86,18 @@ void SpawnManager::createEnemies(int maximumEnemies)
 		m_enemiesToSpawn[m_enemiesToSpawnCount] = new Enemy(-30, -30 * (m_enemiesToSpawnCount + 1), 30);
 	}
 }
+
+void SpawnManager::end()
+{
+	//for every Enemy in m_enemyToSpawn, starting from the last to the first, is casted to a Character, 
+	//then their Character::end() function is called.
+	for (m_enemiesToSpawnCount; m_enemiesToSpawnCount > 0; m_enemiesToSpawnCount--)
+	{
+		//cast the Enemy in this iteration to a Character.
+		Character* characterToEnd = dynamic_cast<Character*>(m_enemiesToSpawn[m_enemiesToSpawnCount]);
+		//end this character.
+		characterToEnd->end();
+	}
+	//return the function
+	return;
+}

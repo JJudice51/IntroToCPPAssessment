@@ -36,4 +36,7 @@ public:
 	/// </summary>
 	/// <param name="maximumEnemies">the maximum amount of enemies and the amount of enemies that will be created.</param>
 	static void createEnemies(int maximumEnemies);
+
+	//queues up all stored enemies to be deleted.
+	static void end();
 };
