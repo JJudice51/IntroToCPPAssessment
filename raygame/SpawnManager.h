@@ -2,7 +2,7 @@
 #include "Enemy.h"
 
 
-class SpawnManager
+static class SpawnManager
 {
 private:
 	/// <summary>
@@ -10,23 +10,30 @@ private:
 	/// </summary>
 	static Actor** m_enemiesToSpawn;
 	/// <summary>
-	/// stores the enemies that have been despawned from the scene.
-	/// </summary>
-	static Actor** m_despawnedEnemies;
-	/// <summary>
 	/// the amount of enemies that are in the m_enemiesToSpawn array.
 	/// </summary>
-	static int m_enemyCount;
+	static int m_enemyToSpawnCount;
+	/// <summary>
+	/// the maximum amount of enemies that can be stored inside of m_enemiesToSpawn;
+	/// </summary>
+	static int m_maxSpawnEnemies;
 
 public:
 	/// <summary>
-	/// adds an enemy that is currently waiting to the array of enemies.
+	/// gets the first stored Enemy and then removes it from the m_enemiesToSpawn array then returns it.
 	/// </summary>
-	void addEnemy();
+	/// <returns>the Enemy that will be removed from m_enemiesToSpawn</returns>
+	Enemy* getFirstEnemy();
+
+	/// <summary>
+	/// despawns an enemy and adds it to m_enemiesToBeSpawned.
+	/// </summary>
+	/// <returns>true if operation was a success</returns>
+	static bool despawnEnemy(Enemy* enemyToDespawn);
 
 	/// <summary>
 	/// creates and adds enemies to the m_enemiesToSpawn array.
 	/// </summary>
 	/// <param name="maximumEnemies">the maximum amount of enemies and the amount of enemies that will be created.</param>
-	void createEnemies(int maximumEnemies);
+	static void createEnemies(int maximumEnemies);
 };
