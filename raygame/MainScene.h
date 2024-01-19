@@ -17,18 +17,18 @@ public:
 	/// <summary>
 	/// runs code necessary to begin the scene
 	/// </summary>
-	void start();
+	void start() override;
 
 	/// <summary>
 	/// runs code everytime the game loops
 	/// updates everything in the current Scene.
 	/// </summary>
 	/// <param name="deltaTime">the amount of time between the last frame and the current one.</param>
-	void update(float deltaTime);
+	void update(float deltaTime) override;
 
 	/// <summary>
 	/// runs code to quit the scene.
 	/// calls deconstructors.
 	/// </summary>
-	void end();
+	void end() override;
 };

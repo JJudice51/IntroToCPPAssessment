@@ -12,7 +12,9 @@ MainScene::~MainScene()
 
 void MainScene::start()
 {
-	//creates an enemy.
+	//create player
+
+	//creates an enemies.
 	Enemy* enemy1 = new Enemy(200, 200, 30);
 
 	//adds the enemy to the Scene.
