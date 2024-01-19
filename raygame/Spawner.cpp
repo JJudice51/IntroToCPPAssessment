@@ -7,7 +7,7 @@ Spawner::Spawner(Actor* owner, float x, float y)
 	m_owner = owner;
 
 	//stores the position of this spawner
-	m_position = { x, y };
+	m_position = MathLibrary::Vector2(x, y);
 }
 
 Spawner::Spawner(MathLibrary::Vector2 facing, float x, float y)
@@ -17,13 +17,13 @@ Spawner::Spawner(MathLibrary::Vector2 facing, float x, float y)
 	//stores the current direction the spawner is facing
 	m_facing = facing;
 	//stores the position of this spawner
-	m_position = { x, y };
+	m_position = MathLibrary::Vector2( x, y );
 }
 
 void Spawner::spawn(Actor* spawnee)
 {
 	//makes the position of the spawnee the same as the spawner
-	spawnee->getTransform()->setWorldPosition(m_position);
+	spawnee->getTransform()->setLocalPosition(m_position);
 	//makes the facing of the spawnee the same as the spawner
 	spawnee->getTransform()->setForward(m_facing);
 }

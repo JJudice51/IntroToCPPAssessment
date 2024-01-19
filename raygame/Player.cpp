@@ -5,8 +5,13 @@
 #include "raylib.h"
 
 
-
-
+//
+//Player::Player()
+//{
+//	m_health = nullptr;
+//	m_movement = nullptr;
+//	m_sprite = nullptr;
+//}
 
 Player::Player(float x, float y, float speed, const char* name, const char* faction, const char* spritepath) : Character::Character(x,y,speed,name,faction, spritepath)
 {

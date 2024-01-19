@@ -14,6 +14,11 @@ private:
 	
 public:
 	/// <summary>
+	/// default constructor for Player.
+	/// </summary>
+	Player();
+
+	/// <summary>
 	/// Coonstructor for player
 	/// </summary>
 	Player(float x, float y, float speed, const char* name, const char* faction, const char* spritepath);

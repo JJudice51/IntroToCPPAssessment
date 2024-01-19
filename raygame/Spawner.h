@@ -8,10 +8,6 @@
 class Spawner : public Actor
 {
 private:
-	/// <summary>
-	/// Stores referrence to Actor that needs to be creted and added to scene in the SpawnActor function.
-	/// </summary>
-	Actor** m_actorsToAdd;
 	Actor* m_owner;
 	MathLibrary::Vector2 m_facing;
 	MathLibrary::Vector2 m_position;

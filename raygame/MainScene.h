@@ -2,7 +2,7 @@
 #include "Scene.h"
 #include "Enemy.h"
 #include "EnemySpawnGroup.h"
-class Player;
+#include "Player.h"
 
 
 class MainScene : public Scene
@@ -21,12 +21,12 @@ private:
 	/// <summary>
 	/// stores a reference to the main spawner that spawns enemies.
 	/// </summary>
-	EnemySpawnGroup* m_spawner;
+	EnemySpawnGroup m_spawner;
 
 	///
 	///stores the active player for the main scene.
 	/// 
-	Player* m_player1;
+	Player m_player1;
 
 
 public:
