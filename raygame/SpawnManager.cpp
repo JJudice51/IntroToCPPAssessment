@@ -1,6 +1,7 @@
 #include "SpawnManager.h"
 #include "ActorArray.h"
 #include "Engine.h"
+#include "Enemy.h"
 
 //initializes the variable that keeps track of the amount of enemies in the m_enemiesToSpawn array.
 static int m_enemiesToSpawnCount = 0;

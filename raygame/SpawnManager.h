@@ -1,6 +1,7 @@
 #pragma once
-#include "Enemy.h"
 
+//forward declare enemy and actor to prevent circular dependancy
+class Enemy; class Actor;
 
 static class SpawnManager
 {
