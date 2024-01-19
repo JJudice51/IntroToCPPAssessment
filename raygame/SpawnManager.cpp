@@ -3,12 +3,14 @@
 #include "Engine.h"
 #include "Enemy.h"
 
+//initializes the variabel that keeps track of the reference for all of the enemies stored.
+Actor** SpawnManager::m_enemiesToSpawn = nullptr;
 //initializes the variable that keeps track of the amount of enemies in the m_enemiesToSpawn array.
-static int m_enemiesToSpawnCount = 0;
+int SpawnManager::m_enemiesToSpawnCount = 0;
 //initializes the variable that stores the maximum amount of enemies in the m_enemiesToSpawn array.
-static int m_maxSpawnEnemies = 10;
+int SpawnManager::m_maxSpawnEnemies = 10;
 
-Enemy* SpawnManager::getFirstEnemy()
+Actor* SpawnManager::getFirstEnemy()
 {
 	//if there are no enemies, return nullptr
 	if(m_enemiesToSpawnCount < 1)
@@ -36,8 +38,7 @@ Enemy* SpawnManager::getFirstEnemy()
 
 	//return the original first Actor in the array that we had removed (enemyToReturn).
 	//must be dynamically casted to the Enemy class.
-	return dynamic_cast<Enemy*>(enemyToReturn);
-
+	return enemyToReturn;
 }
 
 void SpawnManager::despawnEnemy(Enemy* enemyToDespawn)

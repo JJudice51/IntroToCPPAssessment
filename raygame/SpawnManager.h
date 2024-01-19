@@ -13,7 +13,7 @@ private:
 	/// <summary>
 	/// the amount of enemies that are in the m_enemiesToSpawn array.
 	/// </summary>
-	static int m_enemyToSpawnCount;
+	static int m_enemiesToSpawnCount;
 	/// <summary>
 	/// the maximum amount of enemies that can be stored inside of m_enemiesToSpawn;
 	/// </summary>
@@ -24,7 +24,7 @@ public:
 	/// gets the first stored Enemy and then removes it from the m_enemiesToSpawn array then returns it.
 	/// </summary>
 	/// <returns>the Enemy that will be removed from m_enemiesToSpawn</returns>
-	Enemy* getFirstEnemy();
+	static Actor* getFirstEnemy();
 
 	/// <summary>
 	/// despawns an enemy and adds it to m_enemiesToBeSpawned.
