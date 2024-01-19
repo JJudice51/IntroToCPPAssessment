@@ -8,6 +8,11 @@ Scene::Scene()
     m_world = new MathLibrary::Matrix3();
 }
 
+Scene::~Scene()
+{
+    delete m_world;
+}
+
 MathLibrary::Matrix3* Scene::getWorld()
 {
     return m_world;
@@ -122,4 +127,5 @@ void Scene::end()
     }
 
     m_started = false;
+    delete this;
 }

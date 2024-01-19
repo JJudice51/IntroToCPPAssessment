@@ -31,4 +31,10 @@ public:
 	/// </summary>
 	/// <param name="deltaTime">the amount of time that has passed between the last frame and the current one.</param>
 	void update(float deltaTime) override;
+
+	/// <summary>
+	/// despawns this enemy with SpawnManager.
+	/// should be called once this Character is below 0.1f health.
+	/// </summary>
+	void end();
 };

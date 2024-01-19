@@ -2,6 +2,7 @@
 #include "HealthComponent.h"
 #include "MoveComponent.h"
 #include "Transform2D.h"
+#include "Engine.h"
 
 Character::Character(float x, float y, float speed, const char* name, const char* faction) : Actor::Actor(x, y, name)
 {
@@ -24,6 +25,29 @@ void Character::start()
 
 void Character::update(float deltaTime)
 {
-	//calls the base function
+	//stores a reference to the HealthComponent of this Character.
+	//casting is required to call HealthComponent functions.
+	HealthComponent* hP = dynamic_cast<HealthComponent*>(getComponent("Health"));
+	//check if this Character's HealthComponent's getHealth() function returns number lower than 0.1f.
+	if (hP->getHealth() < 0.1)
+	{
+		//end this Character if they run out of health points.
+		//if this is an enemy, it despawns them, else they are destroyed.
+		end();
+		//returns this function once end() is complete.
+		return;
+	}
+	//else if this Character is alive,
+	//call the base function
 	Actor::update(deltaTime);
+}
+
+void Character::end()
+{
+	//queue this Character for deletion, because they are dead.
+	//the following end() function should happen before this Actor is finally deleted.
+	Engine().addActorToDeletionList(this);
+	//calls base end() which calls end() for
+	//all components attached to this Actor.
+	Actor::end();
 }

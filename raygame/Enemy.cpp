@@ -2,6 +2,7 @@
 #include "Transform2D.h"
 #include "Waypoint.h"
 #include "MoveComponent.h"
+#include "SpawnManager.h"
 
 Enemy::Enemy(float x, float y, float speed) : Character::Character(x, y, speed, "Enemy", "Enemy")
 {
@@ -53,4 +54,10 @@ void Enemy::update(float deltaTime)
 
 	//calls the base function
 	Character::update(deltaTime);
+}
+
+void Enemy::end()
+{
+	//despawns this enemy to be spawned again (to reuse it).
+	SpawnManager().despawnEnemy(this);
 }

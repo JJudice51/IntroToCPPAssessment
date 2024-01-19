@@ -40,7 +40,7 @@ public:
 	/// Changes the location and facing direction of the Actor to be spawned.
 	/// </summary>
 	///  <param name="spawnee">the Actor who gets spawned</param>
-	void Spawn(Actor* spawnee);
+	void spawn(Actor* spawnee);
 
 	/// <summary>
 	/// Change the Facing of the spawner according to the owner if it has one.

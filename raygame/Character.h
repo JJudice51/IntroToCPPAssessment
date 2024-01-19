@@ -37,4 +37,9 @@ public:
 	/// </summary>
 	/// <param name="deltaTime">the amount of time that has passed between this frame and the last frame.</param>
 	void update(float deltaTime) override;
+
+	/// <summary>
+	/// destroys this character and their components once they are no longer in use.
+	/// </summary>
+	void end() override;
 };
