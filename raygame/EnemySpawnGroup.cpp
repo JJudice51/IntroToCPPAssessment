@@ -3,9 +3,6 @@
 #include "Scene.h"
 #include "SpawnManager.h"
 
-//initializes m_enemyCount and gives it a starting value of 3. This only happens once every game.
-static int m_enemyCount = 3;
-
 EnemySpawnGroup::EnemySpawnGroup(float x, float y, MathLibrary::Vector2 facing) : Actor::Actor(x, y, "EnemySpawnGroup")
 {
 	//stores a copy of the direction this SpawnGroup will face.
@@ -23,12 +20,6 @@ bool EnemySpawnGroup::spawn()
 	{
 		//...set iterator to 0.
 		m_iterator = 0;
-	}
-	//if the pool of enemies is does not have an enemy to spawn...
-	if (m_enemyPoolCount < 1)
-	{
-		//...return false to quit early and indicate that it was unsuccessful.
-		return false;
 	}
 	//spawns an Actor into the scene from the current spawner.
 	m_spawners[m_iterator]->spawn(SpawnManager().getFirstEnemy());

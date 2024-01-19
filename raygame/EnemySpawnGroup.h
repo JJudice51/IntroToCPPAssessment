@@ -9,18 +9,6 @@ class EnemySpawnGroup : public Actor
 {
 private:
 	/// <summary>
-	/// stores the amount of enemies that need to be spawned.
-	/// </summary>
-	static int m_enemyCount;
-	/// <summary>
-	/// the amount of enemies ready to spawn.
-	/// </summary>
-	static int m_enemyPoolCount;
-	/// <summary>
-	/// a reference to the pool of enemies that will be spawned.
-	/// </summary>
-	static Actor* m_enemies;
-	/// <summary>
 	/// points to an array of pointers that are pointing at Spawners.
 	/// </summary>
 	Spawner** m_spawners;
@@ -51,10 +39,4 @@ public:
 	/// </summary>
 	/// <returns>a boolean representing if the spawn operation was a success.</returns>
 	bool spawn();
-
-	/// <summary>
-	/// gets the amount of Enemies left in this SpawnGroup.
-	/// </summary>
-	/// <returns>the amount of enemies left to spawn.</returns>
-	static int getEnemyCount() { return m_enemyCount; }
 };

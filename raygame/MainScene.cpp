@@ -2,6 +2,9 @@
 #include "SpawnManager.h"
 #include "EnemySpawnGroup.h"
 
+//set enemy spawn time.
+float m_enemySpawnTime = 7.0f;
+
 MainScene::MainScene() : Scene::Scene()
 {
 
@@ -20,7 +23,7 @@ void MainScene::start()
 	SpawnManager().createEnemies(20);
 
 	//create a group of spawners to spawn the enemies.
-	m_spawner = &EnemySpawnGroup(200, 200, {-1, 0});
+	m_spawner = new EnemySpawnGroup(200, 200, {-1, 0});
 
 	//calls the base function.
 	Scene::start();
