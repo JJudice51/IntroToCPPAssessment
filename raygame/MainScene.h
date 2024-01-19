@@ -1,11 +1,25 @@
 #pragma once
 #include "Scene.h"
 #include "Enemy.h"
+#include "EnemySpawnGroup.h"
 
 class MainScene : public Scene
 {
 private:
+	/// <summary>
+	/// stores the amount of time that has passed since the last enemy has been spawned.
+	/// </summary>
+	float m_waitTime;
 
+	/// <summary>
+	/// stores the amount of time that should have passed before an enemy can be spawned.
+	/// </summary>
+	float m_enemySpawnTime;
+
+	/// <summary>
+	/// stores a reference to the main spawner that spawns enemies.
+	/// </summary>
+	EnemySpawnGroup* m_spawner;
 public:
 	/// <summary>
 	/// constructs the main scene where most of the game will take place.

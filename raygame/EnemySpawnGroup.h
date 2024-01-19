@@ -1,5 +1,6 @@
 #pragma once
 #include "Vector2.h"
+#include "Actor.h"
 
 //forward declaration of the Spawner class.
 class Spawner;
@@ -31,10 +32,6 @@ private:
 	/// stores the facing direction of this group of spawners.
 	/// </summary>
 	MathLibrary::Vector2 m_facing;
-	/// <summary>
-	/// stores the position of this group of spawners in the current scene.
-	/// </summary>
-	MathLibrary::Vector2 m_position;
 	/// <summary>
 	/// the number value representing a space in the spawner array.
 	/// </summary>

@@ -28,8 +28,7 @@ public:
 	/// <summary>
 	/// despawns an enemy and adds it to m_enemiesToBeSpawned.
 	/// </summary>
-	/// <returns>true if operation was a success</returns>
-	static bool despawnEnemy(Enemy* enemyToDespawn);
+	static void despawnEnemy(Enemy* enemyToDespawn);
 
 	/// <summary>
 	/// creates and adds enemies to the m_enemiesToSpawn array.

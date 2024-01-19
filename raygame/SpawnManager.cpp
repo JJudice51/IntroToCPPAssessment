@@ -39,7 +39,7 @@ Enemy* SpawnManager::getFirstEnemy()
 
 }
 
-bool SpawnManager::despawnEnemy(Enemy* enemyToDespawn)
+void SpawnManager::despawnEnemy(Enemy* enemyToDespawn)
 {
 	//if the m_enemiesToSpawn array is full...
 	if (m_enemiesToSpawnCount == m_maxSpawnEnemies)
