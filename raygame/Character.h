@@ -15,6 +15,7 @@ private:
 	/// stores the amount of speed this Character will move every update.
 	/// </summary>
 	float m_speed;
+	
 
 public:
 	/// <summary>

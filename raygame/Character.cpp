@@ -9,14 +9,15 @@ Character::Character(float x, float y, float speed, const char* name, const char
 	m_faction = faction;
 	//stores the amount of speed that has been given to this Character.
 	m_speed = speed;
-};
-
-void Character::start()
-{
 	//adds a health component
 	addComponent(new HealthComponent(this, 100));
 	//adds a move component
 	addComponent(new MoveComponent(this, m_speed));
+};
+
+void Character::start()
+{
+
 	//calls the base function
 	Actor::start();
 }
