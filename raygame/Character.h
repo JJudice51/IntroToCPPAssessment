@@ -3,6 +3,7 @@
 #include <Vector2.h>
 #include "Actor.h"
 
+
 class Character : public Actor
 {
 private:
@@ -25,7 +26,8 @@ public:
 	/// <param name="y">the position of the Character on the y axis</param>
 	/// <param name="name">the name of the Character</param>
 	/// <param name="faction">the faction of the Character</param>
-	Character(float x, float y, float speed, const char* name, const char* faction);
+	/// <param name="spritepath">allows the constructor to use a spritepath to give the character a sprite in game.</param>
+	Character(float x, float y, float speed, const char* name, const char* faction, const char* spritepath);
 
 	/// <summary>
 	/// runs all the code needed at the start of this Character.

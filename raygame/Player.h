@@ -3,19 +3,20 @@
 
 class HealthComponent;
 class MoveComponent;
+class SpriteComponent;
 class Player : public Character
 {
 private:
 	HealthComponent* m_health;
 	MoveComponent* m_movement;
-	
+	SpriteComponent* m_sprite;
 	
 	
 public:
 	/// <summary>
 	/// Coonstructor for player
 	/// </summary>
-	Player(float x, float y, float speed, const char* name, const char* faction);
+	Player(float x, float y, float speed, const char* name, const char* faction, const char* spritepath);
 
 
 	/// <summary>

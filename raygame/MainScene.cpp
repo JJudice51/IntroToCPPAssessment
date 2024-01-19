@@ -1,6 +1,8 @@
 #include "MainScene.h"
 #include "SpawnManager.h"
 #include "EnemySpawnGroup.h"
+#include "Player.h"
+
 
 //set enemy spawn time.
 float m_enemySpawnTime = 7.0f;
@@ -18,6 +20,8 @@ MainScene::~MainScene()
 void MainScene::start()
 {
 	//create player
+	m_player1 = new Player(20,20,100,"GoodGuy", "player", "Images/player.png");
+
 
 	//create enemies.
 	SpawnManager().createEnemies(20);

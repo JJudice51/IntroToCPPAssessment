@@ -1,10 +1,12 @@
 #include "Character.h"
 #include "HealthComponent.h"
 #include "MoveComponent.h"
+#include "SpriteComponent.h"
 #include "Transform2D.h"
 #include "Engine.h"
 
-Character::Character(float x, float y, float speed, const char* name, const char* faction) : Actor::Actor(x, y, name)
+
+Character::Character(float x, float y, float speed, const char* name, const char* faction, const char* spritepath) : Actor::Actor(x, y, name)
 {
 	//stores the faction that this Character is apart of.
 	m_faction = faction;
@@ -14,6 +16,8 @@ Character::Character(float x, float y, float speed, const char* name, const char
 	addComponent(new HealthComponent(this, 100));
 	//adds a move component
 	addComponent(new MoveComponent(this, m_speed));
+	//adds a sprite component
+	addComponent(new SpriteComponent(this, ""));
 };
 
 void Character::start()

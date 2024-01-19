@@ -1,17 +1,19 @@
 #include "Player.h"
 #include "MoveComponent.h"
 #include "HealthComponent.h"
+#include "SpriteComponent.h"
 #include "raylib.h"
 
 
 
 
 
-Player::Player(float x, float y, float speed, const char* name, const char* faction) : Character::Character(x,y,speed,name,faction)
+Player::Player(float x, float y, float speed, const char* name, const char* faction, const char* spritepath) : Character::Character(x,y,speed,name,faction, spritepath)
 {
 
 	m_health = dynamic_cast<HealthComponent*>(getComponent("Health"));
 	m_movement = dynamic_cast<MoveComponent*>(getComponent("Move"));
+	m_sprite = dynamic_cast<SpriteComponent*>(getComponent("Sprite"));
 }
 
 /// <summary>

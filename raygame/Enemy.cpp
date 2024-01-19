@@ -4,7 +4,7 @@
 #include "MoveComponent.h"
 #include "SpawnManager.h"
 
-Enemy::Enemy(float x, float y, float speed) : Character::Character(x, y, speed, "Enemy", "Enemy")
+Enemy::Enemy(float x, float y, float speed) : Character::Character(x, y, speed, "Enemy", "Enemy", "")
 {
 	//sets the current point that this Enemy is at to null because this Enemy is not in the scene yet.
 	m_currentPoint = nullptr;
