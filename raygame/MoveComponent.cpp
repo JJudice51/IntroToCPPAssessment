@@ -20,13 +20,6 @@ void MoveComponent::move(MathLibrary::Vector2 direction)
 	transform->setLocalPosition(transform->getLocalPosition() + /*Velocity*/(direction * m_speed));
 }
 
-void MoveComponent::setFacing(MathLibrary::Vector2 direction)
-{
-	//normalizes the direction given.
-	direction.normalize();
-	//changes the owner's forward direction to be the new direction given.
-	m_owner->getTransform()->setForward(direction);
-}
 
 void MoveComponent::rotate(float radians)
 {
@@ -38,12 +31,4 @@ void MoveComponent::scale(float scalar)
 {
 	//scales the owner's transform by a given amount.
 	m_owner->getTransform()->scale(MathLibrary::Vector2(scalar, scalar));
-}
-
-
-
-void MoveComponent::update(float deltaTime)
-{
-	//calls the base function.
-	Component::update(deltaTime);
 }

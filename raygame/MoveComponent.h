@@ -31,12 +31,6 @@ public:
 	void move(MathLibrary::Vector2 direction);
 
 	/// <summary>
-	/// changes the direction that the Actor that this is attached to is facing.
-	/// </summary>
-	/// <param name="direction">the direction to move the Actor.</param>
-	void setFacing(MathLibrary::Vector2 direction);
-
-	/// <summary>
 	/// rotates the Actor that this component is attached to.
 	/// </summary>
 	/// <param name="radians">amount in radians to rotate the Actor.</param>
@@ -48,9 +42,4 @@ public:
 	/// <param name="scalar">the amount to scale the player.</param>
 	void scale(float scalar);
 
-	/// <summary>
-	/// updates this Component.
-	/// </summary>
-	/// <param name="deltaTime">the amount of time that has passed between the current and last frame.</param>
-	void update(float deltaTime) override;
 };
