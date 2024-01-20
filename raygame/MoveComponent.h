@@ -43,6 +43,12 @@ public:
 	void rotate(float radians);
 
 	/// <summary>
+	/// scales the Actor that this component is attached to.
+	/// </summary>
+	/// <param name="scalar">the amount to scale the player.</param>
+	void scale(float scalar);
+
+	/// <summary>
 	/// updates this Component.
 	/// </summary>
 	/// <param name="deltaTime">the amount of time that has passed between the current and last frame.</param>
