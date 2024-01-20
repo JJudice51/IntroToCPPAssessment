@@ -1,13 +1,17 @@
 #include "Character.h"
 #include "HealthComponent.h"
 #include "MoveComponent.h"
+#include "SpriteComponent.h"
 #include "Transform2D.h"
 #include "Engine.h"
 
-Character::Character(float x, float y, float speed, const char* name) : Actor::Actor(x, y, name)
+Character::Character(float x, float y, float speed, const char* spritePath, const char* name) : Actor::Actor(x, y, name)
 {
 	//stores the amount of speed that has been given to this Character.
 	m_speed = speed;
+
+	//stores the spritePath of this Character.
+	m_spritePath = spritePath;
 };
 
 void Character::start()
@@ -16,6 +20,8 @@ void Character::start()
 	addComponent(new HealthComponent(this, 100));
 	//adds a move component
 	addComponent(new MoveComponent(this, m_speed));
+	//adds a sprite component
+	addComponent(new SpriteComponent(this, m_spritePath));
 	//calls the base function
 	Actor::start();
 }

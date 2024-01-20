@@ -3,7 +3,7 @@
 #include "MoveComponent.h"
 
 
-Enemy::Enemy(float x, float y, float speed) : Character::Character(x, y, speed, "Enemy")
+Enemy::Enemy(float x, float y, float speed) : Character::Character(x, y, 20, "", "Enemy")
 {
 
 }

@@ -11,15 +11,22 @@ private:
 	/// </summary>
 	float m_speed;
 
+	/// <summary>
+	/// stores a reference to the chars that represent the directory
+	/// for the png that represents this Character.
+	/// </summary>
+	const char* m_spritePath;
+
 public:
 	/// <summary>
 	/// constructs a Character at a specific position, with a name, a faction, a sprite, and a collider.
 	/// </summary>
 	/// <param name="x">the position of the Character on the x axis</param>
 	/// <param name="y">the position of the Character on the y axis</param>
+	/// <param name="spritePath">the  chars representing the directory of the png for this characters sprite</param>
 	/// <param name="name">the name of the Character</param>
 	/// <param name="faction">the faction of the Character</param>
-	Character(float x, float y, float speed, const char* name);
+	Character(float x, float y, float speed, const char* spritePath, const char* name);
 
 	/// <summary>
 	/// runs all the code needed at the start of this Character.

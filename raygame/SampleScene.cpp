@@ -1,18 +1,18 @@
 #include "SampleScene.h"
 #include "SpriteComponent.h"
 #include "Transform2D.h"
+#include "Player.h"
 
 void SampleScene::start()
 {
 	//This is a better comment
-	Character* guy1 = new Character(50, 50, 50, "Guy1", "player");
-	guy1->addComponent(new SpriteComponent(guy1, "Images/player.png"));
-	guy1->getTransform()->setScale({ 50, 50 });
-	addActor(guy1);
+	Player* player1 = new Player(50, 50, 20);
+	
+	player1->getTransform()->setScale({ 50, 50 });
+	addActor(player1);
 
-	Enemy* badGuy = new Enemy(50, 50, 50);
-	badGuy->addComponent(new SpriteComponent(badGuy, "Images/enemy.png"));
-	badGuy->getTransform()->setScale({ 50,50 });
-	addActor(badGuy);
+	Character* enemy = new Character(100, 100, 20, "Images/Enemy.png", "Enemy");
+	enemy->getTransform()->setScale({ 50,50 });
+	addActor(enemy);
 	
 }

@@ -4,7 +4,7 @@
 #include "MoveComponent.h"
 #include "raylib.h"
 
-Player::Player(float x, float y, float speed) : Character::Character(x, y, speed, "Player")
+Player::Player(float x, float y, float speed) : Character::Character(x, y, speed, "Images/Player.png", "Player")
 {
 	//gives this player a collider.
 	setCollider(new CircleCollider(25, this));
