@@ -153,23 +153,15 @@
     <ClCompile Include="CircleCollider.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Component.cpp" />
-    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="HealthComponent.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MainScene.cpp" />
     <ClCompile Include="MoveComponent.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="SampleScene.cpp" />
     <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="Spawner.cpp" />
-    <ClCompile Include="EnemySpawnGroup.cpp" />
-    <ClCompile Include="SpawnManager.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="Transform2D.cpp" />
-    <ClCompile Include="Weapon.cpp" />
-    <ClCompile Include="WeaponComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AABBCollider.h" />
@@ -179,22 +171,13 @@
     <ClInclude Include="CircleCollider.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Component.h" />
-    <ClInclude Include="Enemy.h" />
     <ClInclude Include="Engine.h" />
-    <ClInclude Include="HealthComponent.h" />
     <ClInclude Include="MoveComponent.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="Projectile.h" />
     <ClInclude Include="SampleScene.h" />
     <ClInclude Include="Scene.h" />
-    <ClInclude Include="Spawner.h" />
-    <ClInclude Include="EnemySpawnGroup.h" />
-    <ClInclude Include="SpawnManager.h" />
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="Transform2D.h" />
-    <ClInclude Include="MainScene.h" />
-    <ClInclude Include="Weapon.h" />
-    <ClInclude Include="WeaponComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\Images\bullet.png">
