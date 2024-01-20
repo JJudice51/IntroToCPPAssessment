@@ -4,6 +4,7 @@
 #include "SpriteComponent.h"
 #include "Transform2D.h"
 #include "Engine.h"
+#include "CircleCollider.h"
 
 Character::Character(float x, float y, float speed, const char* spritePath, const char* name) : Actor::Actor(x, y, name)
 {
@@ -13,6 +14,8 @@ Character::Character(float x, float y, float speed, const char* spritePath, cons
 	//stores the spritePath of this Character.
 	m_spritePath = spritePath;
 
+	//gives this Character a collider.
+	setCollider(new CircleCollider(25, this));
 
 	//adds a health component
 	addComponent(new HealthComponent(this, 100));

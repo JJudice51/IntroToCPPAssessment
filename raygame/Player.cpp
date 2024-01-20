@@ -4,19 +4,15 @@
 #include "MoveComponent.h"
 #include "raylib.h"
 
-Player::Player(float x, float y, float speed) : Character::Character(x, y, speed, "Images/Player.png", "Player")
+Player::Player(float x, float y, float speed, const char* spritePath) : Character::Character(x, y, speed, spritePath, "Player")
 {
-	//gives this player a collider.
-	setCollider(new CircleCollider(25, this));
-
 	//get a reference to the MoveComponent of this Player.
 	m_movement = dynamic_cast<MoveComponent*>(getComponent("Move"));
 }
 
 void Player::start()
 {
-	//scale the Player appropriately.
-	m_movement->scale(5);
+	Character::start();
 }
 
 void Player::update(float deltaTime)
@@ -50,13 +46,13 @@ void Player::update(float deltaTime)
 	if (RAYLIB_H IsKeyPressed(KEY_Z))
 	{
 		//...get smaller
-		m_movement->scale(-1);
+		m_movement->scale(0.5);
 	}
 	//if the X key is being pressed...
 	if (RAYLIB_H IsKeyPressed(KEY_X))
 	{
 		//...get bigger
-		m_movement->scale(1);
+		m_movement->scale(2.0);
 	}
 
 	//if the Q key is being pressed...
@@ -71,10 +67,13 @@ void Player::update(float deltaTime)
 		//...rotate right
 		m_movement->rotate(1);
 	}
+
+	Character::update(deltaTime);
 }
 
 void Player::end()
 {
+	Character::end();
 }
 
 void Player::onCollision(Actor* actor)

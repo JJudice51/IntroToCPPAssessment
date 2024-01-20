@@ -4,6 +4,7 @@
 #include "Character.h"
 #include "Enemy.h"
 #include "ActorArray.h"
+#include "Player.h"
 
 class Scene
 {
