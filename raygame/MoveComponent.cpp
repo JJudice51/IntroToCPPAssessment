@@ -34,6 +34,14 @@ void MoveComponent::rotate(float radians)
 	m_owner->getTransform()->rotate(radians);
 }
 
+void MoveComponent::scale(float scalar)
+{
+	//scales the owner's transform by a given amount.
+	m_owner->getTransform()->scale(MathLibrary::Vector2(scalar, scalar));
+}
+
+
+
 void MoveComponent::update(float deltaTime)
 {
 	//calls the base function.

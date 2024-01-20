@@ -4,10 +4,8 @@
 #include "Transform2D.h"
 #include "Engine.h"
 
-Character::Character(float x, float y, float speed, const char* name, const char* faction) : Actor::Actor(x, y, name)
+Character::Character(float x, float y, float speed, const char* name) : Actor::Actor(x, y, name)
 {
-	//stores the faction that this Character is apart of.
-	m_faction = faction;
 	//stores the amount of speed that has been given to this Character.
 	m_speed = speed;
 };
