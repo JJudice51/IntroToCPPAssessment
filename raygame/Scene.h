@@ -2,7 +2,6 @@
 #include <Matrix3.h>
 #include "Actor.h"
 #include "Character.h"
-#include "Enemy.h"
 #include "ActorArray.h"
 #include "Player.h"
 
