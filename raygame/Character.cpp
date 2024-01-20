@@ -54,7 +54,7 @@ void Character::end()
 {
 	//queue this Character for deletion, because they are dead.
 	//the following end() function should happen before this Actor is finally deleted.
-	Engine().addActorToDeletionList(this);
+	Engine::addActorToDeletionList(this);
 	//calls base end() which calls end() for
 	//all components attached to this Actor.
 	Actor::end();
