@@ -167,7 +167,6 @@
     <ClCompile Include="SpawnManager.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="Transform2D.cpp" />
-    <ClCompile Include="Waypoint.cpp" />
     <ClCompile Include="Weapon.cpp" />
     <ClCompile Include="WeaponComponent.cpp" />
   </ItemGroup>
@@ -192,7 +191,6 @@
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="Transform2D.h" />
     <ClInclude Include="MainScene.h" />
-    <ClInclude Include="Waypoint.h" />
     <ClInclude Include="Weapon.h" />
     <ClInclude Include="WeaponComponent.h" />
   </ItemGroup>
