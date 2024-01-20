@@ -10,11 +10,6 @@ Player::Player(float x, float y, float speed, const char* spritePath) : Characte
 	m_movement = dynamic_cast<MoveComponent*>(getComponent("Move"));
 }
 
-void Player::start()
-{
-	Character::start();
-}
-
 void Player::update(float deltaTime)
 {
 	//if the W key is being pressed...
@@ -70,12 +65,7 @@ void Player::update(float deltaTime)
 
 	Character::update(deltaTime);
 }
-
-void Player::end()
-{
-	Character::end();
-}
-
+ 
 void Player::onCollision(Actor* actor)
 {
 	//get a reference to the Actor's HealthComponent.
