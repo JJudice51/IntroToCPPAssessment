@@ -7,11 +7,6 @@ class Character : public Actor
 {
 private:
 	/// <summary>
-	/// stores a reference to an array of characters that represent the faction of this Character
-	/// </summary>
-	const char* m_faction;
-
-	/// <summary>
 	/// stores the amount of speed this Character will move every update.
 	/// </summary>
 	float m_speed;
@@ -24,7 +19,7 @@ public:
 	/// <param name="y">the position of the Character on the y axis</param>
 	/// <param name="name">the name of the Character</param>
 	/// <param name="faction">the faction of the Character</param>
-	Character(float x, float y, float speed, const char* name, const char* faction);
+	Character(float x, float y, float speed, const char* name);
 
 	/// <summary>
 	/// runs all the code needed at the start of this Character.
