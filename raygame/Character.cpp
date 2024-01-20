@@ -12,16 +12,18 @@ Character::Character(float x, float y, float speed, const char* spritePath, cons
 
 	//stores the spritePath of this Character.
 	m_spritePath = spritePath;
-};
 
-void Character::start()
-{
+
 	//adds a health component
 	addComponent(new HealthComponent(this, 100));
 	//adds a move component
 	addComponent(new MoveComponent(this, m_speed));
 	//adds a sprite component
 	addComponent(new SpriteComponent(this, m_spritePath));
+};
+
+void Character::start()
+{
 	//calls the base function
 	Actor::start();
 }
