@@ -73,6 +73,10 @@ void Player::update(float deltaTime)
 	}
 }
 
+void Player::end()
+{
+}
+
 void Player::onCollision(Actor* actor)
 {
 	//get a reference to the Actor's HealthComponent.
