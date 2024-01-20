@@ -13,6 +13,7 @@ void SampleScene::start()
 	Enemy* badGuy = new Enemy(50, 50, 50);
 	badGuy->addComponent(new SpriteComponent(badGuy, "Images/enemy.png"));
 	badGuy->getTransform()->setScale({ 50,50 });
+	badGuy->getTransform()->setWorldPosition({ 250,250 });
 	addActor(badGuy);
 	
 }
